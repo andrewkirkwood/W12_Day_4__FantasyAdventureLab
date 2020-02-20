@@ -7,10 +7,14 @@ public class DwarfTest {
 
     private Dwarf dwarf;
     private IArmed axe;
+    private Gem gem;
+
     @Before
     public void before(){
         dwarf = new Dwarf("Jeff");
         axe = new Axe("Long Axe", 10);
+        gem = new Gem("Ruby", 10);
+
     }
     @Test
     public void can_get_name(){
@@ -48,6 +52,18 @@ public class DwarfTest {
     public void can_increase_health(){
         dwarf.increaseHealth(5);
         assertEquals(105, dwarf.getHealth(),0.01);
+    }
+
+    @Test
+    public void treasure_starts_empty(){
+        assertEquals(0, dwarf.getTreasureList().size());
+    }
+
+    @Test
+    public void can_accept_treasure(){
+        dwarf.addTreasure(gem);
+        assertEquals(10, dwarf.getTreasureValue(), 0.01);
+        assertEquals(1, dwarf.getTreasureList().size());
     }
 
 }

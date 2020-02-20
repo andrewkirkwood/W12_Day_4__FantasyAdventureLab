@@ -8,6 +8,7 @@ public class Dwarf {
     private double defenceMultiplier;
     private double health;
     private ArrayList<IArmed> arms;
+    private ArrayList<ITreasurable> treasureList;
 
     public Dwarf(String name) {
         this.name = name;
@@ -15,6 +16,7 @@ public class Dwarf {
         this.defenceMultiplier = 8;
         this.health = 100;
         this.arms = new ArrayList<IArmed>();
+        this.treasureList = new ArrayList<ITreasurable>();
 
     }
 
@@ -48,5 +50,21 @@ public class Dwarf {
 
     public void increaseHealth(double amount) {
         this.health += amount;
+    }
+
+    public ArrayList<ITreasurable> getTreasureList() {
+        return this.treasureList;
+    }
+
+    public double getTreasureValue() {
+        double total = 0;
+        for (ITreasurable treasureItem: this.treasureList){
+            total += treasureItem.getValue();
+        }
+        return total;
+    }
+
+    public void addTreasure(ITreasurable treasureItem) {
+        this.treasureList.add(treasureItem);
     }
 }
