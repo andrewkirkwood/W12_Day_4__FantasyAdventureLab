@@ -66,4 +66,8 @@ public class DwarfTest {
         assertEquals(1, dwarf.getTreasureList().size());
     }
 
+
+
+
+
 }
