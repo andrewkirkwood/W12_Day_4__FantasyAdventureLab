@@ -30,5 +30,10 @@ public class DwarfTest {
         assertEquals(8, dwarf.getDefenceMultiplier(), 0.01);
     }
 
+//    @Test
+//    public void has_a_weapon(){
+//        assertEquals();
+//    }
+
 
 }
