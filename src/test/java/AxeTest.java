@@ -1,3 +1,4 @@
+import Arm.Axe;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,12 +10,12 @@ public class AxeTest {
 
     @Before
     public void before(){
-        axe = new Axe("Long Axe", 10);
+        axe = new Axe("Long Arm.Axe", 10);
     }
 
     @Test
     public void has_name(){
-        assertEquals("Long Axe", axe.getName());
+        assertEquals("Long Arm.Axe", axe.getName());
     }
 
     @Test

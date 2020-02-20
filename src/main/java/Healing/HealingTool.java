@@ -1,3 +1,5 @@
+package Healing;
+
 public class HealingTool {
     private String name;
     private double healingAmount;

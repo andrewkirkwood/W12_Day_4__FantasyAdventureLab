@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.BitSet;
+package Character;
 
 public class Cleric extends NonFightingCharacter {
     public Cleric(String name) {

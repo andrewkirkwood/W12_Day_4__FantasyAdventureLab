@@ -1,31 +1,33 @@
+package Character;
+
+import Healing.HealingTool;
+import Treasure.ITreasurable;
+
 import java.util.ArrayList;
 
-public abstract class FightingCharacter {
 
+
+public abstract class NonFightingCharacter {
     private String name;
-    private double attackMultiplier;
+    private ArrayList<HealingTool> healingTools;
     private double defenceMultiplier;
     private double health;
-    private ArrayList<IArmed> arms;
     private ArrayList<ITreasurable> treasureList;
 
-
-    public FightingCharacter(String name) {
+    public NonFightingCharacter(String name) {
         this.name = name;
-        this.attackMultiplier = 6;
-        this.defenceMultiplier = 8;
+        this.healingTools = new ArrayList<HealingTool>();
+        this.defenceMultiplier = 1;
         this.health = 100;
-        this.arms = new ArrayList<IArmed>();
         this.treasureList = new ArrayList<ITreasurable>();
-
     }
 
     public String getName() {
         return name;
     }
 
-    public double getAttackMultiplier() {
-        return attackMultiplier;
+    public ArrayList<HealingTool> getHealingTools() {
+        return healingTools;
     }
 
     public double getDefenceMultiplier() {
@@ -36,14 +38,6 @@ public abstract class FightingCharacter {
         return health;
     }
 
-    public ArrayList<IArmed> getArmsList() {
-        return this.arms;
-    }
-
-    public void addWeapon(IArmed arm) {
-        this.arms.add(arm);
-    }
-
     public void reduceHealth(double amount) {
         this.health -= amount;
     }
@@ -51,6 +45,7 @@ public abstract class FightingCharacter {
     public void increaseHealth(double amount) {
         this.health += amount;
     }
+
 
     public ArrayList<ITreasurable> getTreasureList() {
         return this.treasureList;
@@ -67,4 +62,16 @@ public abstract class FightingCharacter {
     public void addTreasure(ITreasurable treasureItem) {
         this.treasureList.add(treasureItem);
     }
+
+    public void heal(Dwarf dwarf, HealingTool healingTool) {
+        if (this.healingTools.contains(healingTool)){
+            dwarf.increaseHealth(healingTool.getHealingAmount());
+            this.healingTools.remove(healingTool);
+        }
+    }
+
+    public void addHealingTool(HealingTool healingTool) {
+        this.healingTools.add(healingTool);
+    }
+
 }

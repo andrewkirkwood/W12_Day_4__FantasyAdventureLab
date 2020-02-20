@@ -1,3 +1,5 @@
+package Treasure;
+
 public class Gem implements ITreasurable {
     private String name;
     private double value;

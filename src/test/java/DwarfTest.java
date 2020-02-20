@@ -1,18 +1,22 @@
+import Arm.Axe;
+import Arm.Weapon;
+import Treasure.Gem;
 import org.junit.Before;
 import org.junit.Test;
+import Character.*;
 
 import static org.junit.Assert.assertEquals;
 
 public class DwarfTest {
 
     private Dwarf dwarf;
-    private IArmed axe;
+    private Weapon axe;
     private Gem gem;
 
     @Before
     public void before(){
         dwarf = new Dwarf("Jeff");
-        axe = new Axe("Long Axe", 10);
+        axe = new Axe("Long Arm.Axe", 10);
         gem = new Gem("Ruby", 10);
 
     }
@@ -39,7 +43,7 @@ public class DwarfTest {
     @Test
     public void has_a_weapon(){
         dwarf.addWeapon(axe);
-        assertEquals(1, dwarf.getArmsList().size());
+        assertEquals(1, dwarf.getWeaponList().size());
     }
 
     @Test
