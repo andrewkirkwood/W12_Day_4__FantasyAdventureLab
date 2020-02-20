@@ -59,6 +59,7 @@ public class ClericTest {
 
     @Test
     public void can_heal_dwarf(){
+        cleric.addHealingTool(healingTool);
         cleric.heal(dwarf, healingTool);
         assertEquals(110, dwarf.getHealth(), 0.01);
         assertEquals(0, cleric.getHealingTools().size());
