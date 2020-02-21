@@ -5,7 +5,7 @@ import Arm.Spell;
 
 import java.util.ArrayList;
 
-public class Spellcaster extends FightingCharacter {
+public abstract class Spellcaster extends FightingCharacter {
     private ArrayList<Spell> spells;
 
     public Spellcaster(String name) {
