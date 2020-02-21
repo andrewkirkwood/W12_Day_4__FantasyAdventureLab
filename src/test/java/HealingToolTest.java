@@ -9,7 +9,7 @@ public class HealingToolTest {
 
     @Before
     public void before(){
-        healingTool = new HealingTool("bread", 10);
+        healingTool = new HealingTool("bread", 10, 10);
     }
 
     @Test

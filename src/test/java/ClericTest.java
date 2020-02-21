@@ -15,7 +15,7 @@ public class ClericTest {
     @Before
     public void before(){
         cleric = new Cleric("Bob");
-        healingTool = new HealingTool("bread", 10);
+        healingTool = new HealingTool("bread", 10, 10);
         gem = new Gem("Ruby", 10);
         dwarf = new Dwarf("Jeff");
 
