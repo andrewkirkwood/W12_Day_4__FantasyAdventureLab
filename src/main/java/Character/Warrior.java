@@ -1,22 +1,30 @@
 package Character;
 
+import Arm.Arm;
 import Arm.Weapon;
 
 import java.util.ArrayList;
 
-public class Warrior extends FightingCharacter {
-    private ArrayList<Weapon> weapons;
+public abstract class Warrior extends FightingCharacter {
+    private ArrayList<Arm> arms;
 
     public Warrior(String name) {
         super(name);
-        this.weapons = new ArrayList<Weapon>();
+        this.arms = new ArrayList<Arm>();
     }
 
-    public ArrayList<Weapon> getWeaponList() {
-        return this.weapons;
+    public ArrayList<Arm> getArmList() {
+        return this.arms;
     }
 
-    public void addWeapon(Weapon weapon) {
-        this.weapons.add(weapon);
+    public void addArm(Arm arm) {
+        this.arms.add(arm);
     }
-}
+
+//    public void attack(Player enemy){
+//        Weapon currentWeapon = this.arms.get(0);
+//        this.getHealth() -= enemy.getDefenceMultiplier();
+//        enemy.get
+//
+//    }
+//}

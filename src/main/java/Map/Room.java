@@ -10,10 +10,12 @@ import java.util.ArrayList;
 import java.util.BitSet;
 
 public class Room {
+    private String name;
     private ArrayList<Player> enemies;
     private ArrayList<ITreasurable> treasures;
 
-    public Room() {
+    public Room(String name) {
+        this.name = name;
         this.enemies = new ArrayList<Player>();
         this.treasures = new ArrayList<ITreasurable>();
     }
@@ -37,5 +39,13 @@ public class Room {
 
     public void removeTreasure(ITreasurable treasure) {
         this.treasures.remove(treasure);
+    }
+
+    public void removeEnemy(Player enemy) {
+        this.enemies.remove(enemy);
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

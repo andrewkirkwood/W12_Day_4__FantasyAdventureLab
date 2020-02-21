@@ -1,7 +1,7 @@
 import Healing.HealingTool;
 import Map.Room;
 import Character.Player;
-import Character.Wizard;
+import Character.*;
 import Treasure.Gem;
 import Treasure.ITreasurable;
 import org.junit.Before;
@@ -16,16 +16,25 @@ public class RoomTest {
     private Room room;
 
     private Wizard enemyWizard;
+    private Dwarf enemyDwarf;
+    private Cleric enemyCleric;
     private ITreasurable treasureHealth;
     private ITreasurable treasureGem;
 
+
     @Before
     public void before(){
-        room = new Room();
+        room = new Room("Loyal Lair");
         enemyWizard = new Wizard("John");
         treasureHealth = new HealingTool("Bread", 10, 1);
         treasureGem = new Gem("Ruby", 10);
+        enemyDwarf = new Dwarf("Ron");
+        enemyCleric = new Cleric("Bobby");
+    }
 
+    @Test
+    public void room_has_name(){
+        assertEquals("Loyal Lair", room.getName());
     }
 
     @Test
@@ -34,9 +43,28 @@ public class RoomTest {
     }
 
     @Test
-    public void can_add_an_enemy(){
+    public void can_add_a_WIZARD(){
         room.addEnemy(enemyWizard);
         assertEquals(1, room.getEnemies().size());
+    }
+
+    @Test
+    public void can_add_a_dwarf(){
+        room.addEnemy(enemyDwarf);
+        assertEquals(1, room.getEnemies().size());
+    }
+
+    @Test
+    public void can_add_cleric_to_enemies(){
+        room.addEnemy(enemyCleric);
+        assertEquals(1, room.getEnemies().size());
+    }
+
+    @Test
+    public void can_remove_an_enemy(){
+        room.addEnemy(enemyWizard);
+        room.removeEnemy(enemyWizard);
+        assertEquals(0, room.getEnemies().size());
     }
 
     @Test
@@ -66,7 +94,4 @@ public class RoomTest {
         assertEquals(1, room.getTreasures().size());
         assertEquals(false, room.getTreasures().contains(treasureGem));
     }
-
-
-
 }

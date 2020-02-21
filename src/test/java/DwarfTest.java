@@ -42,8 +42,8 @@ public class DwarfTest {
 
     @Test
     public void has_a_weapon(){
-        dwarf.addWeapon(axe);
-        assertEquals(1, dwarf.getWeaponList().size());
+        dwarf.addArm(axe);
+        assertEquals(1, dwarf.getArmList().size());
     }
 
     @Test
