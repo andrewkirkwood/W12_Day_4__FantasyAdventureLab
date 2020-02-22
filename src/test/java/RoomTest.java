@@ -21,6 +21,7 @@ public class RoomTest {
     private ITreasurable treasureHealth;
     private ITreasurable treasureGem;
 
+    private Wizard partyWizard;
 
     @Before
     public void before(){
@@ -30,6 +31,7 @@ public class RoomTest {
         treasureGem = new Gem("Ruby", 10);
         enemyDwarf = new Dwarf("Ron", 2, 2);
         enemyCleric = new Cleric("Bobby", 2);
+        partyWizard = new Wizard("Austin", 10, 10);
     }
 
     @Test
@@ -94,4 +96,16 @@ public class RoomTest {
         assertEquals(1, room.getTreasures().size());
         assertEquals(false, room.getTreasures().contains(treasureGem));
     }
+
+    @Test
+    public void player_can_be_added_to_party(){
+        room.addParty(partyWizard);
+        assertEquals(1, room.getParty().size());
+    }
+
+//    @Test
+//    public void room_can_be_conquered(){
+//        room.add
+//        room.addEnemy(enemyWizard);
+//    }
 }
