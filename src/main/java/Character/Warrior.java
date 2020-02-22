@@ -23,7 +23,10 @@ public abstract class Warrior extends FightingCharacter {
 
     public void attack(Player enemy){
         Arm currentWeapon = this.arms.get(0);
-        enemy.reduceHealth(currentWeapon.getDamage()*this.getAttackMultiplier());
+        enemy.reduceHealth(
+
+                        (currentWeapon.getDamage()*this.getAttackMultiplier())/enemy.defenceMultiplier
+        );
     }
 
 }

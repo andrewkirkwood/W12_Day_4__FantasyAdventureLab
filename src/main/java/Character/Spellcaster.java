@@ -30,4 +30,8 @@ public abstract class Spellcaster extends FightingCharacter {
     }
 
 
+    public void castSpell(Player enemy) {
+        Spell currentSpell = this.getSpellList().get(0);
+        enemy.reduceHealth((currentSpell.getDamage()*this.getAttackMultiplier())/enemy.getDefenceMultiplier());
+    }
 }

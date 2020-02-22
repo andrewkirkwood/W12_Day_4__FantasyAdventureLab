@@ -77,11 +77,8 @@ public class DwarfTest {
     public void can_attack_enemy(){
         dwarf.addArm(axe);
         dwarf.attack(dwarf2);
-        assertEquals(80, dwarf2.getHealth(), 0.01);
+        assertEquals(90, dwarf2.getHealth(), 0.01);
     }
-
-
-
 
 
 }
