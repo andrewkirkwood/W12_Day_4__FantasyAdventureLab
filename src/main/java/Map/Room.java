@@ -1,13 +1,9 @@
 package Map;
 
-import Character.Player;
-import Character.Player;
-
+import Character.*;
 import Treasure.ITreasurable;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.BitSet;
 
 public class Room {
     private String name;
@@ -20,6 +16,9 @@ public class Room {
         this.treasures = new ArrayList<ITreasurable>();
     }
 
+    public String getName() {
+        return this.name;
+    }
 
     public ArrayList<Player> getEnemies() {
         return this.enemies;
@@ -45,7 +44,5 @@ public class Room {
         this.enemies.remove(enemy);
     }
 
-    public String getName() {
-        return this.name;
-    }
+
 }

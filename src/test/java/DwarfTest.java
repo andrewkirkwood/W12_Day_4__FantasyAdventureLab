@@ -16,8 +16,8 @@ public class DwarfTest {
 
     @Before
     public void before(){
-        dwarf = new Dwarf("Jeff");
-        dwarf2 = new Dwarf("Bob");
+        dwarf = new Dwarf("Jeff", 2, 2);
+        dwarf2 = new Dwarf("Bob", 2 ,2);
 
         axe = new Axe("Long Arm.Axe", 10);
         gem = new Gem("Ruby", 10);

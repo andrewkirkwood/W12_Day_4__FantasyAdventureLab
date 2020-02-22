@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public abstract class Spellcaster extends FightingCharacter {
     private ArrayList<Spell> spells;
 
-    public Spellcaster(String name) {
-        super(name);
+    public Spellcaster(String name, double attackMultiplier, double defenceMultiplier) {
+        super(name, attackMultiplier, defenceMultiplier);
         this.spells = new ArrayList<Spell>();
     }
     public ArrayList<Spell> getSpellList() {

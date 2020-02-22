@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public abstract class Warrior extends FightingCharacter {
     private ArrayList<Arm> arms;
 
-    public Warrior(String name) {
-        super(name);
+    public Warrior(String name, double attackMultiplier, double defenceMultiplier) {
+        super(name, attackMultiplier, defenceMultiplier);
         this.arms = new ArrayList<Arm>();
     }
 

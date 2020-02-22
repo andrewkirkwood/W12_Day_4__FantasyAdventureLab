@@ -9,14 +9,10 @@ import java.util.ArrayList;
 
 public abstract class NonFightingCharacter extends Player {
     private ArrayList<HealingTool> healingTools;
-    private double defenceMultiplier;
-    private double health;
 
-    public NonFightingCharacter(String name) {
-        super(name);
+    public NonFightingCharacter(String name, double defenceMultiplier) {
+        super(name, defenceMultiplier);
         this.healingTools = new ArrayList<HealingTool>();
-        super.defenceMultiplier = 1;
-        super.health = 100;
     }
 
     public ArrayList<HealingTool> getHealingTools() {

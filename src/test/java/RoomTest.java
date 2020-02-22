@@ -25,11 +25,11 @@ public class RoomTest {
     @Before
     public void before(){
         room = new Room("Loyal Lair");
-        enemyWizard = new Wizard("John");
+        enemyWizard = new Wizard("John", 2, 2);
         treasureHealth = new HealingTool("Bread", 10, 1);
         treasureGem = new Gem("Ruby", 10);
-        enemyDwarf = new Dwarf("Ron");
-        enemyCleric = new Cleric("Bobby");
+        enemyDwarf = new Dwarf("Ron", 2, 2);
+        enemyCleric = new Cleric("Bobby", 2);
     }
 
     @Test

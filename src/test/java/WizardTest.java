@@ -15,10 +15,10 @@ public class WizardTest {
 
     @Before
     public void before(){
-        wizard = new Wizard("Jimmy");
+        wizard = new Wizard("Jimmy", 2, 2);
         spell = new Spell("Fireball", 30);
         spell2 = new Spell("hurricane", 30);
-        dwarf = new Dwarf("Steven");
+        dwarf = new Dwarf("Steven", 2,2);
 
     }
 

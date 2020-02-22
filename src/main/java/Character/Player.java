@@ -10,10 +10,10 @@ public abstract class Player {
     protected double health;
     protected ArrayList<ITreasurable> treasureList;
 
-    public Player(String name) {
+    public Player(String name, double deferenceMultiplier) {
         this.name = name;
-        this.defenceMultiplier = 0;
-        this.health = 0;
+        this.defenceMultiplier = deferenceMultiplier;
+        this.health = 100;
         this.treasureList = new ArrayList<ITreasurable>();
     }
 

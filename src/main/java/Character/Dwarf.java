@@ -1,7 +1,9 @@
 package Character;
 
 public class Dwarf extends Warrior {
-    public Dwarf(String name) {
-        super(name);
+
+
+    public Dwarf(String name, double attackMultiplier, double defenceMultiplier) {
+        super(name, attackMultiplier, defenceMultiplier);
     }
 }
