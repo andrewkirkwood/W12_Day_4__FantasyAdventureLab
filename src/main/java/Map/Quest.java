@@ -5,17 +5,20 @@ import Character.*;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.BitSet;
 
 public class Quest {
     private String name;
-    private ArrayList<Room> rooms;
     private Party party;
+    private ArrayList<Party> enemiesList;
+    private ArrayList<Room> rooms;
     private boolean isStillActive;
 
     public Quest(String name) {
         this.name = name;
-        this.rooms = new ArrayList<Room>();
         this.party = new Party(name);
+        this.enemiesList = new ArrayList<Party>();
+        this.rooms = new ArrayList<Room>();
         this.isStillActive = true;
     }
 
@@ -23,9 +26,11 @@ public class Quest {
         return this.party;
     }
 
-    public void addToParty(Player partyMember) {
-        this.party.getMembers().add(partyMember);
+    public ArrayList<Room> getRooms() {
+        return this.rooms;
     }
 
-
+    public ArrayList<Party> getEnemiesList() {
+        return this.enemiesList;
+    }
 }
