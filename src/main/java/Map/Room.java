@@ -9,11 +9,13 @@ public class Room {
     private String name;
     private ArrayList<Player> enemies;
     private ArrayList<ITreasurable> treasures;
+    private boolean active;
 
     public Room(String name) {
         this.name = name;
         this.enemies = new ArrayList<Player>();
         this.treasures = new ArrayList<ITreasurable>();
+        this.active = true;
     }
 
     public String getName() {

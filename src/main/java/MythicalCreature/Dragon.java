@@ -1,35 +1,17 @@
 package MythicalCreature;
+import Character.*;
 
 public class Dragon extends MythicalCreature {
-    private String name;
-    private double attackMultiplier;
-    private double defenceMultiplier;
-    private double health;
+
 
     public Dragon(String name, double attackMultiplier, double defenceMultiplier) {
-        this.name = name;
-        this.attackMultiplier = attackMultiplier;
-        this.defenceMultiplier = defenceMultiplier;
-        this.health = 100;
+        super(name, attackMultiplier, defenceMultiplier);
     }
 
-    public String getName() {
-        return name;
+
+    public void attack(Player enemy){
+        enemy.reduceHealth(this.getAttackMultiplier() * 5);
     }
 
-    public double getAttackMultiplier() {
-        return attackMultiplier;
-    }
 
-    public double getDefenceMultiplier() {
-        return defenceMultiplier;
-    }
-
-    public double getHealth() {
-        return health;
-    }
-
-    public void reduceHealth(double amount) {
-        this.health -= amount;
-    }
 }
