@@ -1,6 +1,6 @@
 package MythicalCreature;
 
-public class Dragon {
+public class Dragon extends MythicalCreature {
     private String name;
     private double attackMultiplier;
     private double defenceMultiplier;
