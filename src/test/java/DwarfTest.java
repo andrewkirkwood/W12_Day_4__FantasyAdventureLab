@@ -10,12 +10,15 @@ import static org.junit.Assert.assertEquals;
 public class DwarfTest {
 
     private Dwarf dwarf;
+    private Dwarf dwarf2;
     private Weapon axe;
     private Gem gem;
 
     @Before
     public void before(){
         dwarf = new Dwarf("Jeff");
+        dwarf2 = new Dwarf("Bob");
+
         axe = new Axe("Long Arm.Axe", 10);
         gem = new Gem("Ruby", 10);
 
@@ -32,12 +35,12 @@ public class DwarfTest {
 
     @Test
     public void has_attack_multiplier(){
-        assertEquals(6, dwarf.getAttackMultiplier(), 0.01);
+        assertEquals(2, dwarf.getAttackMultiplier(), 0.01);
     }
 
     @Test
     public void has_defence_multiplier(){
-        assertEquals(8, dwarf.getDefenceMultiplier(), 0.01);
+        assertEquals(2, dwarf.getDefenceMultiplier(), 0.01);
     }
 
     @Test
@@ -68,6 +71,13 @@ public class DwarfTest {
         dwarf.addTreasure(gem);
         assertEquals(10, dwarf.getTreasureValue(), 0.01);
         assertEquals(1, dwarf.getTreasureList().size());
+    }
+
+    @Test
+    public void can_attack_enemy(){
+        dwarf.addArm(axe);
+        dwarf.attack(dwarf2);
+        assertEquals(80, dwarf2.getHealth(), 0.01);
     }
 
 

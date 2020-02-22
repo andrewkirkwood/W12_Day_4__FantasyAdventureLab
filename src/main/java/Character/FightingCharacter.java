@@ -13,8 +13,8 @@ public abstract class FightingCharacter extends Player {
 
     public FightingCharacter(String name) {
         super(name);
-        this.attackMultiplier = 6;
-        super.defenceMultiplier = 8;
+        this.attackMultiplier = 2;
+        super.defenceMultiplier = 2;
         super.health = 100;
     }
 
