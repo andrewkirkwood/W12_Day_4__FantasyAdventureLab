@@ -1,6 +1,7 @@
 package Map;
 
 import Character.*;
+import Party.Party;
 import Treasure.ITreasurable;
 
 import java.util.ArrayList;
@@ -8,15 +9,13 @@ import java.util.BitSet;
 
 public class Room {
     private String name;
-    private ArrayList<Player> party;
-    private ArrayList<Player> enemies;
+    private Party enemies;
     private ArrayList<ITreasurable> treasures;
     private boolean active;
 
     public Room(String name) {
         this.name = name;
-        this.party = new ArrayList<Player>();
-        this.enemies = new ArrayList<Player>();
+        this.enemies = new Party(name);
         this.treasures = new ArrayList<ITreasurable>();
         this.active = true;
     }
@@ -26,11 +25,15 @@ public class Room {
     }
 
     public ArrayList<Player> getEnemies() {
-        return this.enemies;
+        return this.enemies.getMembers();
     }
 
     public void addEnemy(Player enemy) {
-        this.enemies.add(enemy);
+        this.enemies.getMembers().add(enemy);
+    }
+
+    public void removeEnemy(Player enemy) {
+        this.enemies.getMembers().remove(enemy);
     }
 
     public ArrayList<ITreasurable> getTreasures() {
@@ -45,16 +48,7 @@ public class Room {
         this.treasures.remove(treasure);
     }
 
-    public void removeEnemy(Player enemy) {
-        this.enemies.remove(enemy);
-    }
 
 
-    public ArrayList<Player> getParty() {
-        return this.party;
-    }
 
-    public void addParty(Player partyMember) {
-        this.party.add(partyMember);
-    }
 }

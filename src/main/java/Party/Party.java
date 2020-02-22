@@ -1,7 +1,6 @@
 package Party;
 import Character.*;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
+import Treasure.ITreasurable;
 import java.util.ArrayList;
 
 public class Party {
@@ -41,5 +40,25 @@ public class Party {
         else {
             return false;
         }
+    }
+
+    public double getTotalTreasureValue() {
+        double total = 0;
+        for (Player member : this.members ){
+            total += member.getTreasureValue();
+        }
+        return total;
+    }
+
+    public ArrayList<ITreasurable> getAllTreasures() {
+        ArrayList<ITreasurable> treasures = new ArrayList<ITreasurable>();
+        for (Player member : this.members){
+            if(member.getHealth() < 1 ){
+                for (ITreasurable treasure : member.getTreasureList()){
+                    treasures.add(treasure);
+                }
+            }
+        }
+        return treasures;
     }
 }

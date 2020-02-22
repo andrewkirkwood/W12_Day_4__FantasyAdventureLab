@@ -1,5 +1,10 @@
 package MythicalCreature;
 import Character.*;
+import Treasure.ITreasurable;
+
+import java.util.ArrayList;
+import java.util.BitSet;
+
 public abstract class MythicalCreature {
 
     private String name;
@@ -37,4 +42,5 @@ public abstract class MythicalCreature {
     public void attack(Player enemy){
 
     }
+
 }
