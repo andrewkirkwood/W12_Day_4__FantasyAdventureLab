@@ -1,11 +1,10 @@
-package Character;
-
+package Character.Fighting.FightingCharacter;
+package Character.Player;
 import Arm.Arm;
-import Arm.Weapon;
 
 import java.util.ArrayList;
 
-public abstract class Warrior extends FightingCharacter {
+public abstract class Warrior extends Character.Player.FightingCharacter {
     private ArrayList<Arm> arms;
 
     public Warrior(String name, double attackMultiplier, double defenceMultiplier) {

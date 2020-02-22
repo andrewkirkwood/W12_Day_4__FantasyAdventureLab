@@ -1,8 +1,9 @@
+import Character.Fighting.Dwarf;
+import Character.NonFighting.Cleric;
 import Healing.HealingTool;
 import Treasure.Gem;
 import org.junit.Before;
 import org.junit.Test;
-import Character.*;
 
 import static org.junit.Assert.assertEquals;
 

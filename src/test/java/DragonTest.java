@@ -1,3 +1,4 @@
+import Character.Fighting.Dwarf;
 import MythicalCreature.Dragon;
 import Character.*;
 import org.junit.Before;

@@ -1,9 +1,9 @@
-import Arm.Arm;
 import Arm.Spell;
+import Character.Fighting.Dwarf;
+import Character.Fighting.Wizard;
 import MythicalCreature.Dragon;
 import org.junit.Before;
 import org.junit.Test;
-import Character.*;
 
 import static org.junit.Assert.assertEquals;
 

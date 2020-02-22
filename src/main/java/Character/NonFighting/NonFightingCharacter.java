@@ -1,7 +1,7 @@
-package Character;
+package Character.NonFighting;
 
+import Character.Fighting.Dwarf;
 import Healing.HealingTool;
-import Treasure.ITreasurable;
 
 import java.util.ArrayList;
 

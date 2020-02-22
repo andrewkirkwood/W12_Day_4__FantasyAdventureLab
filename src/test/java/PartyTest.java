@@ -1,8 +1,9 @@
 import Arm.Arm;
 import Arm.Axe;
+import Character.Fighting.Dwarf;
+import Character.Fighting.Wizard;
 import Healing.HealingTool;
 import Party.Party;
-import Character.*;
 import Treasure.Gem;
 import Treasure.ITreasurable;
 import org.junit.Before;

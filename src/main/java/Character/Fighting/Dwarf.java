@@ -1,4 +1,6 @@
-package Character;
+package Character.Fighting;
+
+import Character.Fighting.Warrior;
 
 public class Dwarf extends Warrior {
 

@@ -1,12 +1,10 @@
-package Character;
+package Character.Fighting;
 
-import Arm.Arm;
 import Arm.Spell;
-import MythicalCreature.Dragon;
+import Character.Fighting.FightingCharacter;
 import MythicalCreature.MythicalCreature;
 
 import java.util.ArrayList;
-import java.util.BitSet;
 
 public abstract class Spellcaster extends FightingCharacter {
     private ArrayList<Spell> spells;

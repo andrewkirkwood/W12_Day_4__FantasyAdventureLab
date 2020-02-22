@@ -1,4 +1,4 @@
-package Character;
+package Character.Player;
 
 import Arm.Arm;
 import Treasure.ITreasurable;

@@ -1,6 +1,7 @@
-package Character;
+package Character.Fighting;
 
 import Arm.Spell;
+import Character.Fighting.Spellcaster;
 
 import java.util.ArrayList;
 

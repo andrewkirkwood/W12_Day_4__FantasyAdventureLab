@@ -1,7 +1,7 @@
+import Character.Fighting.Wizard;
 import Map.Quest;
 import org.junit.Before;
 import org.junit.Test;
-import Character.*;
 
 import static org.junit.Assert.assertEquals;
 

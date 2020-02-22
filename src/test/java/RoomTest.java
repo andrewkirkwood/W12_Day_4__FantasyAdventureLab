@@ -1,13 +1,12 @@
+import Character.Fighting.Dwarf;
+import Character.Fighting.Wizard;
+import Character.NonFighting.Cleric;
 import Healing.HealingTool;
 import Map.Room;
-import Character.Player;
-import Character.*;
 import Treasure.Gem;
 import Treasure.ITreasurable;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 

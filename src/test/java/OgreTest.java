@@ -1,5 +1,5 @@
+import Character.Fighting.Dwarf;
 import MythicalCreature.Ogre;
-import Character.*;
 import Treasure.Gem;
 import Treasure.ITreasurable;
 import org.junit.Before;
